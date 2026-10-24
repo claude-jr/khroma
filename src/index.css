@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './assets/fonts/fonts.css';
 
 *,
 *::before,
@@ -9,8 +10,7 @@
 }
 
 :root {
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: Manrope, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
