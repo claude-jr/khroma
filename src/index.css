@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './assets/fonts/fonts.css';
 
 *,
 *::before,
@@ -9,8 +10,7 @@
 }
 
 :root {
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: Manrope, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -24,4 +24,43 @@
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+}
+
+/* App Dock */
+.app-dock {
+  @apply absolute bottom-0 left-1/2 -translate-x-1/2 bottom-2 rounded-2xl bg-neutral-950/60 border-t border-neutral-700/95 shadow-xl shadow-neutral-900/60 flex items-center justify-center gap-1.5 backdrop-blur-3xl backdrop-saturate-200 p-1.5;
+}
+
+.app-button {
+  @apply flex items-center justify-center aspect-square w-8.5 h-8.5 rounded-xl hover:bg-neutral-700/50 border-t border-neutral-700/0 hover:border-neutral-700/55 transition-colors;
+}
+.app-button.active {
+  @apply relative bg-neutral-700/70 hover:bg-neutral-600/60 border-t border-neutral-700/95 hover:border-neutral-600/45 shadow;
+}
+.app-button.active::after{
+  content: "";
+  position: absolute;
+  bottom: 0.5px;
+  width: 35%;
+  height: 2.5px;
+  background-color: var(--color-sky-500);
+  border-radius: 3px;
+}
+
+/* Activity Bar */
+.activity-bar {
+  @apply absolute top-0 left-0 w-full bg-neutral-950/60 backdrop-blur-3xl backdrop-saturate-300 h-[25px] px-4 text-[14px] flex items-center justify-between text-neutral-200 select-none;
+}
+.activity-bar .active-program {
+  @apply flex gap-3.5 items-center;
+}
+.activity-bar .active-program .active-program_menus {
+  @apply flex gap-2 items-center text-[13px] mt-px text-neutral-100/85;
+  letter-spacing: 0.3px;
+}
+.activity-bar .system-controls {
+  @apply flex flex-row-reverse items-center gap-3 text-[13.5px];
+}
+.activity-bar .system-controls > * {
+  @apply flex items-center gap-0.5;
 }
