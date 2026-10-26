@@ -1,14 +1,12 @@
 import {
-  AirplayIcon,
   AlarmClockIcon,
-  BatteryLowIcon,
   Volume2Icon,
   WifiIcon,
   WifiHighIcon,
   WifiLowIcon,
-  BatteryMediumIcon,
   BatteryCharging,
   CastIcon,
+  WifiOffIcon,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -101,7 +99,17 @@ const ActivityBar = () => {
   return (
     <div className="activity-bar">
       <div className="active-program">
-        <span className="font-medium">Google Photos</span>
+        <span className="font-medium">Visual Studio Code</span>
+        <div className="active-program_menus">
+          <span>File</span>
+          <span>Edit</span>
+          <span>Selection</span>
+          <span>View</span>
+          <span>Go</span>
+          <span>Run</span>
+          <span>Terminal</span>
+          <span>Help</span>
+        </div>
       </div>
       <div className="system-controls">
         <div className="temporal">
@@ -138,9 +146,10 @@ const ActivityBar = () => {
           ) : strength === "low" ? (
             <WifiLowIcon size={17} />
           ) : (
-            <></>
+            <WifiOffIcon size={17} />
           )}
         </div>
+
         <div className="network">
           <CastIcon color="var(--color-orange-400)" size={16} />
         </div>

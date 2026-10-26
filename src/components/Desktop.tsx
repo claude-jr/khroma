@@ -1,6 +1,6 @@
 // import ventura from "../assets/images/macos-ventura.jpg";
-// import greenLeaves from "../assets/images/green-leaves.jpg"
-import earth from "../assets/images/earth.jpg";
+import greenLeaves from "../assets/images/green-leaves.jpg"
+// import earth from "../assets/images/earth.jpg";
 import ActivityBar from "./ActivityBar";
 import AppDock from "./AppDock";
 
@@ -9,7 +9,7 @@ const Desktop = () => {
     <div
       className="w-screen h-screen relative"
       style={{
-        backgroundImage: `url(${earth})`,
+        backgroundImage: `url(${greenLeaves})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
