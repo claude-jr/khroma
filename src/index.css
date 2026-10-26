@@ -28,11 +28,11 @@
 
 /* App Dock */
 .app-dock {
-  @apply absolute bottom-0 left-1/2 -translate-x-1/2 bottom-2 rounded-2xl bg-neutral-950/60 border-t border-neutral-700/95 shadow-xl shadow-neutral-900/60 flex items-center justify-center gap-1.5 backdrop-blur-3xl backdrop-saturate-200 p-1.5;
+  @apply absolute left-1/2 -translate-x-1/2 bottom-1.5 rounded-2xl bg-neutral-950/70 border-t border-neutral-700/65 shadow-xl shadow-neutral-900/90 flex items-center justify-center gap-1.5 backdrop-blur-3xl backdrop-saturate-200 p-1.5;
 }
 
 .app-button {
-  @apply flex items-center justify-center aspect-square w-8.5 h-8.5 rounded-xl hover:bg-neutral-700/50 border-t border-neutral-700/0 hover:border-neutral-700/55 transition-colors;
+  @apply flex items-center justify-center aspect-square w-8.25 h-8.25 rounded-xl hover:bg-neutral-700/50 border-t border-neutral-700/0 hover:border-neutral-700/55 transition-colors;
 }
 .app-button.active {
   @apply relative bg-neutral-700/70 hover:bg-neutral-600/60 border-t border-neutral-700/95 hover:border-neutral-600/45 shadow;
@@ -40,8 +40,8 @@
 .app-button.active::after{
   content: "";
   position: absolute;
-  bottom: 0.5px;
-  width: 35%;
+  bottom: 1px;
+  width: 32%;
   height: 2.5px;
   background-color: var(--color-sky-600);
   border-radius: 3px;
@@ -49,13 +49,13 @@
 
 /* Activity Bar */
 .activity-bar {
-  @apply absolute top-0 left-0 w-full bg-neutral-950/60 backdrop-blur-[80px] h-[25px] px-3 text-sm flex items-center justify-between text-neutral-200 select-none;
+  @apply absolute top-0 left-0 w-full bg-neutral-950/70 backdrop-blur-3xl h-[28px] px-4 text-[14px] flex items-center justify-between text-neutral-200 select-none;
 }
 .activity-bar .active-program {
-  @apply flex;
+  @apply flex text-[14.5px];
 }
 .activity-bar .system-controls {
-  @apply flex flex-row-reverse items-center gap-3 text-[14px];
+  @apply flex flex-row-reverse items-center gap-2.5;
 }
 .activity-bar .system-controls > * {
   @apply flex items-center gap-0.5;

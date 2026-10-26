@@ -7,7 +7,7 @@ export interface IAppButton {
 const AppButton = ({ name, iconPath, active }: IAppButton) => {
   return (
     <div className={`app-button ${active ? "active" : ""}`}>
-      <img src={iconPath} alt={name} className="w-6.5" />
+      <img src={iconPath} alt={name} className="w-6" />
     </div>
   );
 };
