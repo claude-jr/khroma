@@ -15,13 +15,13 @@ import claude from "../assets/images/apps/claude-ai.png";
 
 const apps: IAppButton[] = [
   { name: "Bash", iconPath: bash },
-  { name: "Google Photos", iconPath: photos, active: true },
+  { name: "Google Photos", iconPath: photos },
   { name: "Windows Media Player", iconPath: mp },
   { name: "OBS Studio", iconPath: obs },
   { name: "Spotify", iconPath: spotify },
   { name: "Microsoft Excel", iconPath: excel },
   { name: "Visual Studio", iconPath: studio },
-  { name: "Visual Studio Code", iconPath: code },
+  { name: "Visual Studio Code", iconPath: code, active: true },
   { name: "Visual Studio Code Insiders", iconPath: insiders },
   { name: "Sticky Notes", iconPath: notes },
   { name: "Weather", iconPath: weather },
