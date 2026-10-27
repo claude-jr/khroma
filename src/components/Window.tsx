@@ -45,7 +45,7 @@ const Window = () => {
     if (!start || e.pointerId !== start.pointerId) return;
 
     // Here we compute the deltas from the initial
-    // mouse click...    
+    // mouse click...
     const dX = e.clientX - start.pointerX;
     const dY = e.clientY - start.pointerY;
     // ...and add the to the position of the window
@@ -70,9 +70,10 @@ const Window = () => {
       style={{
         top: 0,
         left: 0,
-        transform: `translateX(${position.left}px) translateY(${position.top}px)`,
+        transform: `translateX(${Math.max(Math.min(position.left, window.screen.width - (35 + 10)), -850 + 35 + 10)}px)
+                    translateY(${Math.max(Math.min(position.top, window.screen.height - (35 + 10)), 24.895)}px)`,
         touchAction: "none",
-        userSelect: "none"
+        userSelect: "none",
       }}
     >
       <div
