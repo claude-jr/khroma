@@ -13,6 +13,8 @@
   --sans: Manrope, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
+  --activityBar-height: 25px;
+
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
@@ -57,7 +59,7 @@
 
 /* Activity Bar */
 .activity-bar {
-  @apply absolute top-0 left-0 w-full bg-neutral-950/60 backdrop-blur-3xl backdrop-saturate-300 h-[25px] px-4 text-[14px] flex items-center justify-between text-neutral-200 select-none;
+  @apply absolute top-0 left-0 w-full bg-neutral-950/80 backdrop-blur-3xl backdrop-saturate-300 h-[var(--activityBar-height)] px-4 text-[14px] flex items-center justify-between text-neutral-200 select-none;
 }
 .activity-bar .active-program {
   @apply flex gap-3.5 items-center;
@@ -75,5 +77,15 @@
 
 /* Window */
 .window {
-  @apply absolute top-[30px] left-1.5 w-200 h-130 bg-[#131315] rounded-lg;
-} 
+  @apply absolute w-full bg-[#131315] rounded-xl flex flex-col shadow-2xl shadow-neutral-950;
+  height: 550px;
+  width: 850px;
+  /* top: calc(var(--activityBar-height) + 60px); */
+  /* left: 100px; */
+}
+.window .window-handle {
+  @apply w-full bg-neutral-800/60 rounded-t-xl h-[35px];
+}
+.window .window-content {
+  @apply w-full h-full rounded-b-xl;
+}

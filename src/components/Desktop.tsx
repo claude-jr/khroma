@@ -8,7 +8,7 @@ import Window from "./Window";
 const Desktop = () => {
   return (
     <div
-      className="w-screen h-screen relative"
+      className="w-screen h-screen relative overflow-clip"
       style={{
         backgroundImage: `url(${ventura})`,
         backgroundSize: "cover",

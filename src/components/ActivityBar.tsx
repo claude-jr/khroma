@@ -39,7 +39,6 @@ const useNetworkIndicator = () => {
   let strength: "high" | "medium" | "low" | undefined;
   if ("connection" in navigator) {
     const effectiveType = navigator.connection.effectiveType as string;
-    console.log(effectiveType);
     switch (effectiveType) {
       case "4g":
         strength = "high";
