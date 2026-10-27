@@ -25,8 +25,8 @@ const apps: IAppButton[] = [
   { name: "Visual Studio Code Insiders", iconPath: insiders },
   { name: "Sticky Notes", iconPath: notes },
   { name: "Weather", iconPath: weather },
-  { name: "Chrome", iconPath: chrome },
-  { name: "Claude AI", iconPath: claude },
+  { name: "Google Chrome", iconPath: chrome },
+  { name: "Claude", iconPath: claude },
 ];
 
 const AppDock = () => {

@@ -6,8 +6,13 @@ export interface IAppButton {
 
 const AppButton = ({ name, iconPath, active }: IAppButton) => {
   return (
-    <div className={`app-button ${active ? "active" : ""}`}>
-      <img src={iconPath} alt={name} className="w-6" />
+    <div className="app-link">
+      <div className="app-name">
+        <span>{name}</span>
+      </div>
+      <button className={`app-button ${active ? "active" : ""}`}>
+        <img src={iconPath} alt={name} className="w-6" />
+      </button>
     </div>
   );
 };
