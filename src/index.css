@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import './assets/fonts/fonts.css';
+@import "tailwindcss";
+@import "./assets/fonts/fonts.css";
 
 *,
 *::before,
@@ -30,14 +30,16 @@
 .app-dock {
   @apply absolute bottom-0 left-1/2 -translate-x-1/2 bottom-2 rounded-2xl bg-neutral-950/60 border-t border-neutral-700/95 shadow-xl shadow-neutral-900/60 flex items-center justify-center gap-1.5 backdrop-blur-3xl backdrop-saturate-200 p-1.5;
 }
-
+.app-link {
+  @apply relative flex flex-col items-center select-none;
+}
 .app-button {
   @apply flex items-center justify-center aspect-square w-8.5 h-8.5 rounded-xl hover:bg-neutral-700/50 border-t border-neutral-700/0 hover:border-neutral-700/55 transition-colors;
 }
 .app-button.active {
-  @apply relative bg-neutral-700/70 hover:bg-neutral-600/60 border-t border-neutral-700/95 hover:border-neutral-600/45 shadow;
+  @apply bg-neutral-700/70 hover:bg-neutral-600/60 border-t border-neutral-700/95 hover:border-neutral-600/45 shadow;
 }
-.app-button.active::after{
+.app-button.active::after {
   content: "";
   position: absolute;
   bottom: 0.5px;
@@ -45,6 +47,12 @@
   height: 2.5px;
   background-color: var(--color-sky-500);
   border-radius: 3px;
+}
+.app-link .app-name {
+  @apply absolute z-50 -top-4 bg-neutral-900 rounded-md px-1.5 py-0 text-[13px] text-neutral-200 text-center text-nowrap hidden;
+}
+.app-link:hover .app-name{
+  @apply -top-6.5 shadow flex;
 }
 
 /* Activity Bar */
