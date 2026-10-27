@@ -72,3 +72,8 @@
 .activity-bar .system-controls > * {
   @apply flex items-center gap-0.5;
 }
+
+/* Window */
+.window {
+  @apply absolute top-[30px] left-1.5 w-200 h-130 bg-[#131315] rounded-lg;
+} 
