@@ -77,13 +77,13 @@
 
 /* Window */
 .window {
-  @apply absolute w-full bg-[#131315] rounded-xl flex flex-col shadow-2xl shadow-neutral-950;
+  @apply absolute w-full bg-[#131315] rounded-[10px] flex flex-col shadow-2xl shadow-neutral-950 overflow-clip;
   height: 550px;
   width: 850px;
 }
 .window .window-handle {
-  @apply w-full bg-neutral-800/60 rounded-t-xl h-[35px];
+  @apply w-full bg-neutral-800/30 rounded-t-[10px] h-[35px];
 }
 .window .window-content {
-  @apply w-full h-full rounded-b-xl;
+  @apply w-full h-full rounded-b-[10px];
 }

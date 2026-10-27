@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import code from '../../assets/images/apps/visual-studio-code-2019.png'
 
 type WindowPosition = {
   top: number;
@@ -13,10 +14,12 @@ type DragStart = {
   rectangleY: number;
 };
 
-const Window = () => {
+export type WindowProps = WindowPosition
+
+const Window = (windowLoc: WindowProps) => {
   const [position, setPosition] = useState<WindowPosition>({
-    top: 90,
-    left: 110,
+    top: windowLoc.top + 25, // adding to activity bar
+    left: windowLoc.left,
   });
   const dragStart = useRef<DragStart | null>(null);
 
@@ -72,7 +75,7 @@ const Window = () => {
         left: 0,
         transform: `translateX(${Math.max(Math.min(position.left, window.screen.width - (35 + 10)), -850 + 35 + 10)}px)
                     translateY(${Math.max(Math.min(position.top, window.screen.height - (35 + 10)), 24.895)}px)`,
-        touchAction: "none",
+        touchAction: "none", // prevent scrolling on touch
         userSelect: "none",
       }}
     >
@@ -84,7 +87,9 @@ const Window = () => {
         onPointerCancel={handlePointerEnd}
         onLostPointerCapture={handlePointerEnd}
       ></div>
-      <div className="window-content"></div>
+      <div className="window-content flex items-center justify-center">
+        <img src={code} alt="" className="brightness-25 grayscale-100"/>
+      </div>
     </div>
   );
 };
